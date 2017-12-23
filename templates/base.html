@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Django Training - With SqlAlchemy</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+</head>
+
+<body id="css-zen-garden">
+<div class="page-wrapper">
+
+    <section class="intro" id="zen-intro">
+        <header role="banner">
+            <h1>Django Training</h1>
+            <h2>With some basics of SQlAlchemy</h2>
+        </header>
+    </section>
+
+    <div class="main supporting" id="zen-supporting" role="main">
+        {% block container %}{% endblock %}
+        <footer></footer>
+    </div>
+    <aside class="sidebar" role="complementary">
+        <div class="wrapper">
+
+            <div class="design-selection" id="design-selection">
+                <h3 class="select">Some helpful links</h3>
+                <nav role="navigation">
+                    <ul>
+                        <li><h4>Some helpful links</h4></li>
+                        <li>
+                            <a target="_blank" href="https://docs.djangoproject.com/en/2.0/" class="design-name">Latest
+                                official Documentation</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://ccbv.co.uk/" class="design-name">Class based View
+                                details</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://docs.sqlalchemy.org/en/latest/" class="design-name">SQlAlchemy
+                                Documentations</a>
+                        </li>
+                        <li>
+                            <a class="design-name" target="_blank" href="http://www.gettingstartedwithdjango.com/">Video tutorails</a>
+                        </li>
+                        <li>
+                            <a class="design-name" target="_blank" href="https://djangopackages.org">Third party Django based projects</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </aside>
+</div>
+</body>
+</html>

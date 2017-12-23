@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Training project</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+</head>
+<body>
+    <div class="container">
+        {% for message in messages %}
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <div class="alert alert-{{message.tags }}">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                        ×</button>
+                   <span class="glyphicon glyphicon-ok"></span> <strong></strong>
+                    <hr class="message-inner-separator">
+                    <p>{{ message }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <h3>Register yourself!</h3>
+        <br />
+        <form class="form-signin" method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group row">
+                <label for="{{ field.id_for_label }}" class="col-sm-2 col-form-label">{{ field.label}}:</label>
+                <div class="col-sm-10">
+                    {{ field }}
+                </div>
+                {{ field.errors }}
+            </div>
+            {% endfor %}
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

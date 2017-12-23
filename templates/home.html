@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block container %}
+
+
+    <div class="explanation" id="zen-explanation" role="article">
+        <h3>Some history about Django</h3>
+        <p>Django is python based web framework; created for fast paced and database driven web site.
+            This most secure, stable and flexible python framework till date. And also have well written documentation,
+            which can be found at
+            <a target="_blank" href="https://docs.djangoproject.com" title="Django Documentation"><abbr title="Django Documentation">Django Documentation</abbr></a>
+            Current version available is 1.10; Django is compatible with both Python 2.X and 3.X versions.<br/> <br/>
+            In fall of 2003, at World Online, the Web department of a newspaper in Lawrence, Kansas, USA,
+            web developers were working on python applications to meet fast moving newsroom deadlines. This is when Django was born.
+            Initially it was launched with BSD license, now it is being handled by <abbr title="DSF">Django Software Foundation (DSF)</abbr>
+            team (Non profit organization).
+        </p>
+    </div>
+
+    <div class="participation" id="zen-participation" role="article">
+        <h3>Why to use Django/ Features provided by Django</h3>
+        <p>
+            <b>1. Superfast development</b><br />
+            Django has all the components available, you don’t need to actually write every component.
+            You just to overload the functionalities to apply business logic.<br />
+            Since Django is an open source technology and it has huge developers base;
+            you can find multiple Django application available suiting your requirements.
+            <br /><br />
+            For example if you want to have multilingual application you can use Django-Rosetta which handles
+            your word to word translations. Django-Rosetta is one of the available application for internationalization.
+            There are a lot of other alternative to this application.<br /><br />
+            You can find multiple available packages for any category at
+            <a target="_blank" href="https://djangopackages.org">https://djangopackages.org</a><br/><br />
+        </p>
+        <p>
+            <b>2.	Batteries included</b><br />
+            Django framework’s main philosophies are reusability and pluggability of the components.
+            Django has lots of inbuilt components and also have 3rd party applications available.<br/><br />
+            Inbuilt components includes ORM, templating Engine, Authentication schemes, Admin Console, translation support,
+            site map, RSS Feeds and many more.<br/><br />
+        </p>
+        <p>
+            <b>3. Very Scalable </b><br />
+            Scalability can be measured in terms of robustness and extensibility.
+            The framework clearly separates components such as its database layer and application layer.
+            If you make any changes in views it would have minimum impact at templates level.<br/><br />
+            Django supports multiple databases; if we have primary-secondary databases.
+            You can create simple Python class called as Database Router, using which you can decide which database can be used for
+            which functionality. And it ships with a simple-yet-powerful cache framework.
+            <a target="_blank" href="https://blog.disqus.com/scaling-django-to-8-billion-page-views">https://blog.disqus.com/scaling-django-to-8-billion-page-views</a>
+            <br /><br />
+        </p>
+        <p>
+            <b>4.	Secure and Stable</b><br />
+            Django handles multiple security concerns. Like Cross site request forgery protection, SQL injection,
+            Clickjacking protection and also supports SSL/HTTPS.
+            <br /><br />
+            Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a
+            web application in which they're currently authenticated. CSRF attacks specifically target state-changing requests,
+            not theft of data, since the attacker has no way to see the response to the forged request.
+            <br /><br />
+        </p>
+        <p>
+            <b>5.	Flexible</b><br />
+            Every component in Django Framework is customizable hence making it very flexible. You can customize any module of the Framework.
+            <br /><br />
+        </p>
+        <p>
+            <b>6.	Incredibly versatile</b><br />
+            Django is used across the domains, here are some of the popular sites which uses Django <br /><br />
+        </p>
+    </div>
+
+    <div class="benefits" id="zen-benefits" role="article">
+        <h3>Django Fundamentals</h3>
+        <p>
+            <b>1.	MVT (Model-View-Template)</b><br />
+            It is design pattern similar to MVC, just names are shuffled.<br /><br />
+            <b>2.	DRY (Don’t Repeat Yourself)</b><br />
+            Use inheritance and extend the models/views/templates/forms to have the common functionalities.<br /><br />
+            <b>3.	Loose Coupling</b><br />
+            Django ORM do not execute the query when it called but when it is being used.
+            E.g. If users= User.objects.all() at the query won’t be called but it would be called when we iterate over list of the users.<br /><br />
+            <b>4.	Extensibility</b><br />
+            Use inheritance or user 3rd party application before writing your custom code.<br /><br />
+            <b>5.	Simplicity</b><br />
+            Django/python is very high level language with English meaning statements.<br /><br />
+            <b>6.	Less Code</b><br />
+            There a lot of inbuilt components available hence try to reuse the code, and code is expected to be written is business logic.<br /><br />
+        </p>
+    </div>
+
+    <div class="requirements" id="zen-requirements" role="article">
+        <h3>Django Project Components</h3>
+        <p>
+            <b>1. ORM (Object Relational Mapper)</b><br />
+            <b>2. Middleware</b><br />
+            <b>3. URL</b><br />
+            <b>4. Generic Views</b><br />
+            <b>5. Forms</b><br />
+            <b>6. Templates</b><br />
+            <b>7. Context Processors</b><br />
+            <br /><br />
+        </p>
+        <p>Django was invented to meet fast-moving newsroom deadlines, while satisfying the tough requirements of experienced Web developers.</p>
+    </div>
+{% endblock %}
