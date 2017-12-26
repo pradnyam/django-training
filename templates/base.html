@@ -48,10 +48,31 @@
                         <li>
                             <a class="design-name" target="_blank" href="https://djangopackages.org">Third party Django based projects</a>
                         </li>
+                        <li><h4>Sample project</h4></li>
+                        <li><a class="design-name" href="{% url 'blog_list' %}">My Blogs</a></li>
+                        <li><a class="design-name" href="{% url 'add_blog' %}">Add a blog</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
+        <div class="design-archives" id="design-archives">
+				<h3 class="archives">Archives:</h3>
+				<nav role="navigation">
+					<ul>
+                    {%  comment %}
+                        {% if user.is_authenticated %}
+                            <li class="viewall">
+							    <a href="{% url 'register' %}" title="Sign Up">Sign Up</a>
+						    </li>
+                        {% else %}
+                            <li class="viewall">
+							    <a href="{% url 'login' %}" title="Sign In">Sign In</a>
+						    </li>
+                        {% endif %}
+                    {% endcomment %}
+					</ul>
+				</nav>
+			</div>
     </aside>
 </div>
 </body>

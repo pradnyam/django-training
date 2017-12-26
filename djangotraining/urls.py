@@ -16,10 +16,16 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
+from django.contrib import admin
 from django.views.generic.base import TemplateView
 from blog import views
-
+#
 urlpatterns = [
     url('^$', TemplateView.as_view(template_name='home.html'), name='home'),
-    url('^register/$', views.Register.as_view(), name='register')
+    url('^admin/', admin.site.urls, name='admin'),
+    # url('^login/$', views.LoginView.as_view(), name='login'),
+    url('^register/$', views.Register.as_view(), name='register'),
+    url('^blog/$', views.BlogListView.as_view(), name='blog_list'),
+    url('^blog/add/$', views.BlogFormView.as_view(), name='add_blog'),
+    url('^blog/(?P<id>[0-9]+)/$', views.BlogFormView.as_view(), name='edit_blog'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
